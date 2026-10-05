@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matong Operations Suite – Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Login -->
+<section id="login" class="login" hidden>
+  <div class="login-art">
+    <div class="brand-chip" data-brand></div>
+    <h1>One place to run<br>the whole operation.</h1>
+    <p>People, money, stock, jobs and engineering, connected.</p>
+    <ul class="login-points">
+      <li>Offshore jobs tracked from order to delivery</li>
+      <li>Invoices, payments and expenses in one ledger</li>
+      <li>Staff certificates that warn you before they expire</li>
+    </ul>
+  </div>
+  <form class="login-form" id="loginForm">
+    <h2>Sign in</h2>
+    <label>Email<input type="email" value="admin@matongenergy.com" required></label>
+    <label>Password<input type="password" value="demo-password" required></label>
+    <button class="btn primary" type="submit">Sign in</button>
+    <p class="muted small">This is a preview with sample data. Nothing you do here is saved.</p>
+  </form>
+</section>
+
+<!-- App -->
+<div id="app" class="app" hidden>
+  <aside class="side" id="side">
+    <div class="side-top">
+      <div class="brand-chip" data-brand></div>
+      <span class="suite">Operations Suite</span>
+    </div>
+    <nav id="nav"></nav>
+    <div class="side-foot">
+      <div class="avatar">AD</div>
+      <div><strong>Admin Demo</strong><span>Managing Director</span></div>
+      <button class="icon-btn" id="logout" title="Sign out" aria-label="Sign out">⎋</button>
+    </div>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+
+  <div class="main">
+    <header class="top">
+      <button class="icon-btn menu" id="menu" aria-label="Open menu">☰</button>
+      <h1 id="pageTitle">Dashboard</h1>
+      <input class="search" id="search" type="search" placeholder="Filter this page…" aria-label="Filter this page">
+      <span class="demo-tag">Preview · sample data</span>
+    </header>
+    <main id="view" class="view"></main>
+  </div>
+</div>
+
+<div id="modal" class="modal" hidden>
+  <div class="modal-card" role="dialog" aria-modal="true">
+    <button class="icon-btn close" id="modalClose" aria-label="Close">✕</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
